@@ -1,0 +1,159 @@
+.clients {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background-color: var(--background-color);
+}
+.content {
+    width: 84%;
+    padding: 10px;
+}
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header h2 {
+    font-size: 30px;
+    color: var(--text-color);
+}
+.leftSide {
+    width: fit-content;
+}
+.rightSide {
+    width: fit-content;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+.header button {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: rgba(0, 0, 0, .5);
+    color: var(--text-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.header button:last-child {
+    display: none;
+}
+.inputBox {
+    width: 50%;
+}
+.tableContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.actions button {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.actions button:first-child {
+    color: red;
+    background-color: rgba(255, 0, 0, 0.473);
+}
+.actions button:last-child {
+    background-color: #8a5cf663;
+    color: var(--main-color);
+}
+.addContainer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    z-index: 1000;
+}
+.addContent {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    padding: 10px;
+}
+.title {
+    width: 100%;
+    text-align: center;
+}
+.title h3 {
+    font-size: 30px;
+    color: var(--text-color);
+}
+.title button {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 25px;
+    color: var(--text-color);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.form button {
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    border: none;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border-radius: 8px;
+}
+@media(max-width: 900px) {
+    .content {
+        width: 100%;
+    }
+    .header button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    .header button span:first-child {
+        display: none;
+    }
+    .tableContainer {
+        overflow: scroll;
+    }
+    .header button:last-child {
+        display: block;
+    }
+    .inputBox {
+        display: none;
+    }
+}

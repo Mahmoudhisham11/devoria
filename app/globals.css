@@ -1,42 +1,71 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+  --main-color: #8b5cf6;
+  --gold-color: #f59e0b;
+  --background-color: #1f1f1f;
+  --second-color: #2c2c2c;
+  --text-color: #f9fafb;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Open Sans';
+}
+.main {
+  width: 100%;
+  min-height: 100vh;
+}
+.inputContainer {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--second-color);
+  padding: 0 2%;
+  border-radius: 8px;
+}
+.inputContainer label {
+  font-size: 20px;
+  color: var(--main-color);
+}
+.inputContainer input {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 7px;
+  font-size: 20px;
+  background-color: transparent;
+  color: var(--text-color);
+}
+.inputContainer select {
+  width: 100%;
+  outline: none;
+  padding: 7px;
+  border-radius: 8px;
+  border: none;
+  font-size: 20px;
+}
+table {
+  width: 100%;
+  text-align: center;
+}
+table, th, td {
+  padding: 20px;
+  border-collapse: collapse;
+  color: var(--text-color);
+}
+thead th {
+  position: sticky;
+  top: 0;
+  background-color:  var(--second-color);
+}
+tbody tr:nth-child(even) {
+    background-color: var(--second-color);
 }
