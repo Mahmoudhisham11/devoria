@@ -1,12 +1,11 @@
 'use client';
 import styles from "./styles.module.css";
 import { GrMoney } from "react-icons/gr";
-import { FaUserTie } from "react-icons/fa";
-import { MdOutlineAutoGraph } from "react-icons/md";
 import { useEffect, useState } from "react";
 import { db } from "@/firbase";
 import { collection, getDocs } from "firebase/firestore";
-import { HiMiniEye } from "react-icons/hi2";
+import { BsPerson } from "react-icons/bs";
+import { TbMoneybag } from "react-icons/tb";
 
 export default function Balance() {
   const [totalSales, setTotalSales] = useState(0);
@@ -40,40 +39,40 @@ export default function Balance() {
 
   return (
     <div className={styles.blanceContainer}>
-        <div className={`${styles.totalContainer} ${styles.firstBox}`}>
+        <div className={styles.totalContainer}>
           <div className={styles.iconContainer}>
-            <p className={styles.salesIcon}><MdOutlineAutoGraph /></p>
+            <p className={styles.icon}><TbMoneybag /></p>
           </div>
-          <div className={styles.textContainer}>
-            <h3>Total Sales</h3>
-            <p>{totalSales} EGB</p>
+          <div className={styles.textContainer}> 
+            <h3>Total Balance</h3>
+            <strong>{totalSales} EGP</strong>
           </div>
         </div>
-        <div className={`${styles.totalContainer} ${styles.secondBox}`}>
+        <div className={styles.totalContainer}>
           <div className={styles.iconContainer}>
-            <p className={styles.personIcon}><FaUserTie /></p>
+            <p className={styles.icon}><GrMoney /></p>
           </div>
           <div className={styles.textContainer}>
-            <h3>Total Clients</h3>
-            <p>{totalClients}</p>
+            <h3>Total Revenues</h3>
+            <strong>{totalClients} EGP</strong>
           </div>
         </div>
-        <div className={`${styles.totalContainer} ${styles.theredBox}`}>
+        <div className={styles.totalContainer}>
           <div className={styles.iconContainer}>
-            <p className={styles.moneyIcon}><GrMoney /></p>
+            <p className={styles.icon}><GrMoney /></p>
           </div>
           <div className={styles.textContainer}>
-            <h3>Total Buyers</h3>
-            <p>{totalBuyers}</p>
+            <h3>Total Expenses</h3>
+            <strong>{totalBuyers} EGP</strong>
           </div>
         </div>
-        <div className={`${styles.totalContainer} ${styles.firstBox}`}>
+        <div className={styles.totalContainer}>
           <div className={styles.iconContainer}>
-            <p className={styles.salesIcon}><HiMiniEye /></p>
+            <p className={styles.icon}><BsPerson /></p>
           </div>
           <div className={styles.textContainer}>
-            <h3>Total Asks</h3>
-            <p>0</p>
+            <h3>Total Client</h3>
+            <strong>0</strong>
           </div>
         </div>
     </div>

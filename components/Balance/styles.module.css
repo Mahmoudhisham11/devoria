@@ -8,64 +8,35 @@
     gap: 10px;
     margin-top: 20px;
 }
-.firstBox {
-    background-color: var(--main-color);
-    color: var(--text-color);
-}
-.secondBox {
-    background-color: var(--gold-color);
-    color: var(--text-color);
-}
-.theredBox {
-    background-color: var(--text-color);
-    color: black;
-}
 .totalContainer {
     width: 24%;
-    height: 150px;
+    height: 180px;
     border-radius: 8px;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: start;
     flex-direction: column;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.5);
     transition: .3s;
 }
 .totalContainer:hover {
     box-shadow: 0 0 14px 0px rgba(0, 0, 0, .5);
 }
-.salesIcon {
-    width: 40px;
-    height: 40px;
-    font-size: 25px;
-    color: var(--text-color);
-    background-color: rgba(255, 255, 255, 0.377);
+.icon {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    color: var(--gold-color);
+    background-color: #face836b;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
 }
-.personIcon {
-    width: 40px;
-    height: 40px;
-    font-size: 25px;
-    color: var(--text-color);
-    background-color: rgba(255, 255, 255, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px; 
-}
-.moneyIcon {
-    width: 40px;
-    height: 40px;
-    font-size: 25px;
-    color: var(--text-color);
-    background-color: #11182775;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
+.textContainer {
+    font-size: 20px;
 }
 @media(max-width: 767px) {
     .blanceContainer {
@@ -73,5 +44,14 @@
     }
     .totalContainer {
         width: 48%;
+        height: 150px;
+    }
+    .icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .textContainer {
+        font-size: 16px;
     }
 }

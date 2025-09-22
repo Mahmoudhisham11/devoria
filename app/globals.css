@@ -6,9 +6,7 @@
 :root {
   --main-color: #8b5cf6;
   --gold-color: #f59e0b;
-  --background-color: #1f1f1f;
-  --second-color: #2c2c2c;
-  --text-color: #f9fafb;
+  --background-color: #e7e7e7;
 }
 html {
   scroll-behavior: smooth;
