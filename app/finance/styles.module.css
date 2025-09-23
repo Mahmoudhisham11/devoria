@@ -1,17 +1,13 @@
-.clients {
+.finance {
     width: 100%;
     min-height: 100vh;
-    display: flex;
     background-color: var(--background-color);
+    display: flex;
 }
 .contentContainer {
     width: 88%;
     display: flex;
     flex-direction: column;
-}
-.content {
-    width: 100%;
-    padding: 10px;
 }
 .headerContainer {
     width: 100%;
@@ -34,74 +30,88 @@
     font-size: 30px;
     color: white;
 }
-.leftSide {
-    width: fit-content;
-}
-.rigthSide {
-    width: 50%;
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    gap: 10px;
-}
-.rigthSide button {
-    width: 40px;
-    height: 40px;
+.btns {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
-    border: none;
-    background-color: white;
+    gap: 10px;
+}
+.btns button {
+    width: 39px;
+    height: 39px;
+    font-size: 30px;
     border-radius: 8px;
-    color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+.btns button:last-child {
     display: none;
 }
-.inputContainer {
+.content {
+    width: 100%;
+    padding: 10px;
+}
+.balanceContainer {
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top h3 {
+    font-size: 30px;
+}
+.top button {
     width: 40px;
     height: 40px;
+    font-size: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    background-color: white;
-    padding: 0 2%;
     border-radius: 8px;
+    border: none;
+    background-color: #9b77f14f;
+    color: var(--main-color);
+    cursor: pointer;
     transition: .3s;
 }
-.inputContainer label {
-  font-size: 25px;
-  color: var(--main-color);
-  cursor: pointer;
+.top button:hover {
+    background-color: var(--main-color);
+    color: white;
 }
-.inputContainer input {
-    display: none;
-  width: 100%;
-  outline: none;
-  border: none;
-  padding: 7px;
-  font-size: 20px;
-  background-color: transparent;
-  color: var(--text-color);
+.bottom {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
 }
-.inputContainer.open {
-    width: 100%;
-    justify-content: space-between;
-}
-.inputContainer.open input {
-    display: inline;
+.bottom strong {
+    font-size: 30px;
 }
 .tableContainer {
     width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
-    margin-top: 10px;
-    background-color: white;
-    padding: 10px;
-    border-radius: 8px;
+    gap: 25px;
 }
 .tableHead {
     width: 100%;
@@ -164,73 +174,37 @@
     background-color: red;
     color: white;
 }
-.addContainer {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, .5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10px;
-    z-index: 1000;
+.progressBar {
+  width: 100%;
+  height: 20px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
 }
-.addContent {
-    position: relative;
-    width: 100%;
-    height: fit-content;
-    background-color: var(--background-color);
-    border-radius: 8px;
-    padding: 10px;
+
+.progressFill {
+  height: 100%;
+  background: var(--main-color);
+  transition: width 0.3s ease-in-out;
 }
-.title {
-    width: 100%;
-    text-align: center;
-}
-.title h3 {
-    font-size: 30px;
-    color: var(--text-color);
-}
-.title button {
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    font-size: 25px;
-    color: var(--text-color);
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-.form {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-}
-.form button {
-    width: 100%;
-    height: 50px;
-    font-size: 25px;
-    border: none;
-    background-color: var(--main-color);
-    color: var(--text-color);
-    border-radius: 8px;
-}
+
+
 @media(max-width: 767px) {
-    .rightSide {
-        width: 65%;
-    }
-    .rigthSide button {
-        display: block;
-    }
     .contentContainer {
         width: 100%;
     }
     .header h2 {
         font-size: 20px;
+    }
+    .btns {
+        gap: 0;
+    }
+    .btns button {
+        font-size: 20px;
+    }
+    .btns button:last-child {
+        display: block;
     }
     .tableContainer {
         overflow: scroll;

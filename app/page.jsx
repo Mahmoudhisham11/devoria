@@ -5,7 +5,6 @@ import Balance from "@/components/Balance/balance";
 import ReportsChart from "@/components/ReportsChart/reportschart";
 import { MdOutlineNotifications } from "react-icons/md";
 import { FaRegEye } from "react-icons/fa6";
-import { FaRegEyeSlash } from "react-icons/fa6";
 import { HiBars3 } from "react-icons/hi2";
 import { useState } from "react";
 

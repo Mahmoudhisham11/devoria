@@ -6,6 +6,7 @@ import { MdDashboard } from "react-icons/md";
 import { BsPersonPlusFill } from "react-icons/bs";
 import { GrCloudSoftware } from "react-icons/gr";
 import { FaGear } from "react-icons/fa6";
+import { GrMoney } from "react-icons/gr";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
@@ -40,6 +41,15 @@ export default function SideBar({ openSideBar, setOpenSideBar }) {
               <MdDashboard />
             </span>
             <span>Dashboard</span>
+          </Link>
+          <Link
+            href={"/finance"}
+            className={styles.links}
+          >
+            <span>
+              <GrMoney />
+            </span>
+            <span>Finance</span>
           </Link>
           <Link
             href={"/clients"}
