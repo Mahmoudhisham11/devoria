@@ -67,16 +67,7 @@ export default function SideBar({ openSideBar, setOpenSideBar }) {
             <span>
               <GrCloudSoftware />
             </span>
-            <span>Software</span>
-          </Link>
-          <Link
-            href={"/"}
-            className={styles.links}
-          >
-            <span>
-              <FaGear />
-            </span>
-            <span>Settings</span>
+            <span>Projects</span>
           </Link>
         </div>
       </div>

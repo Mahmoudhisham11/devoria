@@ -204,44 +204,46 @@ export default function Clients() {
               <h3>Clients Table</h3>
               <button onClick={() => setOpenAdd(true)}><GoPlus/></button>
             </div>
-            <table>
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Paid</th>
-                  <th>Status</th>
-                  <th>Software</th>
-                  <th>Date</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                {filteredClients.map((client) => (
-                  <tr key={client.id}>
-                    <td>{client.name}</td>
-                    <td>{client.paid} EGP</td>
-                    <td>{client.status}</td>
-                    <td>{client.software}</td>
-                    <td>{client.date}</td>
-                    <td className={styles.actions}>
-                      <button onClick={() => handleEdit(client)}>
-                        <MdOutlineModeEdit />
-                      </button>
-                      <button onClick={() => handleDelete(client.id)}>
-                        <FaRegTrashAlt />
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-                {filteredClients.length === 0 && (
-                  <tr>
-                    <td colSpan="6" style={{ textAlign: "center" }}>
-                      No clients found
-                    </td>
-                  </tr>
-                )}
-              </tbody>
-            </table>
+            <div className={styles.tableContent}>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Paid</th>
+                      <th>Status</th>
+                      <th>Software</th>
+                      <th>Date</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {filteredClients.map((client) => (
+                      <tr key={client.id}>
+                        <td>{client.name}</td>
+                        <td>{client.paid} EGP</td>
+                        <td>{client.status}</td>
+                        <td>{client.software}</td>
+                        <td>{client.date}</td>
+                        <td className={styles.actions}>
+                          <button onClick={() => handleEdit(client)}>
+                            <MdOutlineModeEdit />
+                          </button>
+                          <button onClick={() => handleDelete(client.id)}>
+                            <FaRegTrashAlt />
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                    {filteredClients.length === 0 && (
+                      <tr>
+                        <td colSpan="6" style={{ textAlign: "center" }}>
+                          No clients found
+                        </td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+            </div>
           </div>
         </div>
       </div>

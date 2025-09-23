@@ -142,35 +142,37 @@ export default function Projects() {
                 <GoPlus />
               </button>
             </div>
-            <table>
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Amount</th>
-                  <th>Subscribe</th>
-                  <th>Date</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                {filteredProjects.map((project) => (
-                  <tr key={project.id}>
-                    <td>{project.name}</td>
-                    <td>{project.amount} EGP</td>
-                    <td>{project.subscribe} EGP</td>
-                    <td>{project.date}</td>
-                    <td className={styles.actions}>
-                      <button onClick={() => handleEdit(project)}>
-                        <MdOutlineModeEdit />
-                      </button>
-                      <button onClick={() => handleDelete(project.id)}>
-                        <FaRegTrashAlt />
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <div className={styles.tableContent}>
+                <table>
+                    <thead>
+                        <tr>
+                        <th>Name</th>
+                        <th>Amount</th>
+                        <th>Subscribe</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {filteredProjects.map((project) => (
+                        <tr key={project.id}>
+                            <td>{project.name}</td>
+                            <td>{project.amount} EGP</td>
+                            <td>{project.subscribe} EGP</td>
+                            <td>{project.date}</td>
+                            <td className={styles.actions}>
+                            <button onClick={() => handleEdit(project)}>
+                                <MdOutlineModeEdit />
+                            </button>
+                            <button onClick={() => handleDelete(project.id)}>
+                                <FaRegTrashAlt />
+                            </button>
+                            </td>
+                        </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
           </div>
         </div>
       </div>

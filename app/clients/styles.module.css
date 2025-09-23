@@ -130,6 +130,9 @@
     background-color: var(--main-color);
     color: white;
 }
+.tableContent {
+    width: 100%;
+}
 .actions {
     display: flex;
     justify-content: center;
@@ -231,5 +234,8 @@
     }
     .header h2 {
         font-size: 20px;
+    }
+    .tableContent {
+        overflow: scroll;
     }
 }
