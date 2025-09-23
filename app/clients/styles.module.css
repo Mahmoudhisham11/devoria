@@ -232,7 +232,4 @@
     .header h2 {
         font-size: 20px;
     }
-    .tableContainer {
-        overflow: scroll;
-    }
 }

@@ -65,3 +65,9 @@ thead th {
 tbody tr:nth-child(even) {
     background-color: var(--background-color);
 }
+
+@media (max-width:767px) {
+  table {
+    overflow:  scroll;
+  }
+}

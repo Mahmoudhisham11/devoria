@@ -1,4 +1,4 @@
-.finance {
+.projects {
     width: 100%;
     min-height: 100vh;
     background-color: var(--background-color);
@@ -8,6 +8,10 @@
     width: 88%;
     display: flex;
     flex-direction: column;
+}
+.content {
+    width: 100%;
+    padding: 10px;
 }
 .headerContainer {
     width: 100%;
@@ -30,88 +34,74 @@
     font-size: 30px;
     color: white;
 }
-.btns {
+.leftSide {
+    width: fit-content;
+}
+.rigthSide {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 10px;
+}
+.rigthSide button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border: none;
+    background-color: white;
+    border-radius: 8px;
+    color: var(--main-color);
+    display: none;
+}
+.inputContainer {
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-}
-.btns button {
-    width: 39px;
-    height: 39px;
-    font-size: 30px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-}
-.btns button:last-child {
-    display: none;
-}
-.content {
-    width: 100%;
-    padding: 10px;
-}
-.balanceContainer {
-    width: 100%;
-    height: fit-content;
     background-color: white;
+    padding: 0 2%;
     border-radius: 8px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    padding: 10px;
-}
-.top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.top h3 {
-    font-size: 30px;
-}
-.top button {
-    width: 40px;
-    height: 40px;
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    border: none;
-    background-color: #9b77f14f;
-    color: var(--main-color);
-    cursor: pointer;
     transition: .3s;
 }
-.top button:hover {
-    background-color: var(--main-color);
-    color: white;
+.inputContainer label {
+  font-size: 25px;
+  color: var(--main-color);
+  cursor: pointer;
 }
-.bottom {
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    flex-direction: column;
-    gap: 5px;
-    margin-top: 20px;
+.inputContainer input {
+    display: none;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 7px;
+  font-size: 20px;
+  background-color: transparent;
+  color: var(--text-color);
 }
-.bottom strong {
-    font-size: 30px;
+.inputContainer.open {
+    width: 100%;
+    justify-content: space-between;
+}
+.inputContainer.open input {
+    display: inline;
 }
 .tableContainer {
     width: 100%;
-    background-color: white;
-    border-radius: 8px;
-    margin-top: 20px;
-    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
+    margin-top: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
 }
 .tableHead {
     width: 100%;
@@ -174,36 +164,55 @@
     background-color: red;
     color: white;
 }
-.progressBar {
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 20px;
-  background: #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 10px;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.progressFill {
-  height: 100%;
-  background: var(--main-color);
-  transition: width 0.3s ease-in-out;
+.popup {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.popupActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 
 @media(max-width: 767px) {
+    .rightSide {
+        width: 65%;
+    }
+    .rigthSide button {
+        display: block;
+    }
     .contentContainer {
         width: 100%;
     }
     .header h2 {
         font-size: 20px;
     }
-    .btns {
-        gap: 0;
-    }
-    .btns button {
-        font-size: 20px;
-    }
-    .btns button:last-child {
-        display: block;
+    .tableContainer {
+        overflow: hidden;
     }
 }

@@ -1,8 +1,7 @@
 'use client';
 import SideBar from "@/components/SideBar/sideBar";
 import styles from "./styles.module.css";
-import { FaPlus, FaSearch } from "react-icons/fa";
-import { MdDelete, MdEdit } from "react-icons/md";
+import { FaSearch } from "react-icons/fa";
 import { IoIosCloseCircle } from "react-icons/io";
 import { MdOutlineDriveFileRenameOutline } from "react-icons/md";
 import { GrMoney, GrCloudSoftware, GrStatusUnknown } from "react-icons/gr";
